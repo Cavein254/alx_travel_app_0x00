@@ -24,7 +24,7 @@ class Listing(models.Model):
 
 class Booking(models.Model):
     listing = models.ForeignKey(Listing, on_delete=models.CASCADE)
-    user = models.CharField(max_length=100)  # Assuming a simple string for user, can be replaced with a User model
+    user = models.CharField(max_length=100) 
     start_date = models.DateField()
     end_date = models.DateField()
 
@@ -43,7 +43,7 @@ class Booking(models.Model):
 
 class Review(models.Model):
     listing = models.ForeignKey(Listing, on_delete=models.CASCADE)
-    user = models.CharField(max_length=100)  # Assuming a simple string for user, can be replaced with a User model
+    user = models.CharField(max_length=100) 
     rating = models.PositiveIntegerField()
     comment = models.TextField(blank=True, null=True)
 
